@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
 Route::get('/main', function () {
     return view('main');
 })->name('main');
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
+
+Route::get('/post/create', function () {
+    DB::table('post')->insert([
+        'title' => 'The Title of the Post',
+        'body' => 'The long Body of the Post with Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    ]);  
+});
+
+Route::get('/post', function () {
+    $post = Post::find(1);
+    return $post->title;
+});
