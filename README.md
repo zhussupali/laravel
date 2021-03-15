@@ -1,6 +1,10 @@
 # Labwork
 This is my labwork, where I have to do some stuff in php using laravel framework
 
+## Lab-6 Demo
+*postId requests* 
+![](https://github.com/zhussupali/ZhussupaliSalamat-lab3-website/blob/main/resources/idRequests.gif)
+
 ## Lab-5 screenshots
 *Viewing blog*
 ![](https://github.com/zhussupali/ZhussupaliSalamat-lab3-website/blob/main/resources/blogIndex.png)
