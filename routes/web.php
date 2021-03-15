@@ -44,3 +44,10 @@ Route::get('/post', function () {
 });
 
 Route::get('/blog/index', [BlogContronller::class, 'index']);
+
+
+Route::get('/blog/create', function(){
+    return view('blog.create');
+});
+
+Route::post('/blog/create', [BlogContronller::class, 'store'])->name('add-blog');
