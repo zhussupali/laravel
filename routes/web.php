@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use App\Http\Controllers\BlogContronller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +39,8 @@ Route::get('/post/create', function () {
 });
 
 Route::get('/post', function () {
-    $post = Post::find(1);
-    return $post->title;
+    $post = Post::find(2);
+    return $post;
 });
+
+Route::get('/blog/index', [BlogContronller::class, 'index']);
