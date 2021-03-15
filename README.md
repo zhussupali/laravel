@@ -1,6 +1,12 @@
 # Labwork
 This is my labwork, where I have to do some stuff in php using laravel framework
 
+## Lab-5 screenshots
+*Viewing blog*
+![](https://github.com/zhussupali/ZhussupaliSalamat-lab3-website/blob/main/resources/blogIndex.png)
+*Creating blog*
+![](https://github.com/zhussupali/ZhussupaliSalamat-lab3-website/blob/main/resources/blogCreate.png)
+
 ## Lab-4 screenshots
 
 ![](https://github.com/zhussupali/ZhussupaliSalamat-lab3-website/blob/main/resources/postTable.png)
