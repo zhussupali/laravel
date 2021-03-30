@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use App\Http\Controllers\BlogContronller;
+use App\Http\Controllers\UploadController;
+use App\Mail\WelcomeMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +56,10 @@ Route::post('/blog/create', [BlogContronller::class, 'store'])->name('add-blog')
 
 
 Route::get('/post/{id}', [BlogContronller::class, 'get_post']);
+
+Route::view('/upload', 'upload');
+Route::post('/upload', [UploadController::class, 'index']);
+
+Route::get('/email', function() {
+    return new WelcomeMail();
+    });
