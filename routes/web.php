@@ -57,9 +57,10 @@ Route::post('/blog/create', [BlogContronller::class, 'store'])->name('add-blog')
 
 Route::get('/post/{id}', [BlogContronller::class, 'get_post']);
 
-Route::view('/upload', 'upload');
+Route::get('/upload/{lang}', function($lang){
+    App::setlocale($lang);
+    return view('upload');
+});
 Route::post('/upload', [UploadController::class, 'index']);
 
-Route::get('/email', function() {
-    return new WelcomeMail();
-    });
+

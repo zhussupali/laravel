@@ -12,10 +12,6 @@ class UploadController extends Controller
     //
 
     function index(Request $req){
-        // $this->validate($req, [
-        //     'name'=>'required',
-        //     'image'=>'required'
-        // ]);
 
         $allowedFileExtensions = ['png','jpg'];
         $file = $req->file('file');
